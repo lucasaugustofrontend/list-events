@@ -1,0 +1,204 @@
+@import
+    'partials/functions',
+    'partials/reset',
+    'partials/grid';
+
+* {
+    box-sizing: border-box;
+    &::after,
+    &::before {
+        clear: both;
+        display: none;
+        visibility: hidden;
+    }
+}
+
+.container-fluid {
+    max-width: torem(1600);
+}
+
+.header {
+    padding: torem(10) torem(15);
+    position: relative;
+    @media (min-width: torem(769)) {
+        padding: torem(20) torem(15);
+    }
+    h1 {
+        color: colors(app, title);
+        font: {
+            family: sans-serif;
+            size: torem(25);
+        }
+        @media (min-width: torem(769)) {
+            font-size: torem(32);
+        }
+    }
+    .btn-close {
+        background: transparent;
+        border: torem(2) solid colors(app, title);
+        border-radius: torem(400);
+        color: transparent;
+        width: torem(25);
+        height: torem(25);
+        position: absolute;
+        right: torem(15);
+        top: torem(10);
+        text-align: center;
+        &::before {
+            color: colors(app, title);
+            content: 'x';
+            display: block;
+            font: {
+                family: sans-serif;
+                size: torem(20);
+                weight: bold;
+            }
+            line-height: .8;
+            visibility: visible;
+            @media (min-width: torem(769)) {
+                font-size: torem(30);
+            }
+        }
+        @media (min-width: torem(769)) {
+            width: torem(35);
+            height: torem(35);
+            top: torem(20);
+        }
+    }
+}
+
+.content {
+    background: lighten(colors(app, dark), 75);
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding: torem(5);
+    @media (min-width: torem(769)) {
+        padding: {
+            top: torem(50);
+            right: torem(150);
+            bottom: torem(200);
+            left: torem(150);
+        }
+    }
+    .container {
+        background: colors(app, base);
+        border: torem(1) solid colors(app, text);
+        padding: torem(5);
+        width: 100%;
+        @media (min-width: torem(769)) {
+            padding: torem(15);
+        }
+    }
+    .events {
+        background: lighten(colors(app, dark), 75);
+        padding: torem(10) torem(7);
+        width: 100%;
+        li {
+            background: colors(app, base);
+            display: block;
+            margin-bottom: torem(10);
+            padding: torem(10);
+            position: relative;
+            width: 100%;
+            &::after {
+                background: lighten(colors(app, dark), 65);
+                content: '';
+                display: block;
+                visibility: visible;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: torem(5);
+            }
+            .events_data {
+                position: relative;
+            }
+            .events_data_box {
+                &::before {
+                    background: {
+                        image: url('../images/asset_1.svg');
+                        size: 100%;
+                        repeat: no-repeat;
+                        position: center;
+                    }
+                    content: '';
+                    display: block;
+                    visibility: visible;
+                    position: absolute;
+                    left: torem(5);
+                    top: torem(5);
+                    height: torem(52);
+                    width: torem(52);
+                }
+                border: torem(1) solid colors(app, text);
+                color: colors(app, text);
+                font: {
+                    size: torem(25);
+                }
+                margin-left: torem(65);
+                padding: torem(5) torem(5);
+                text-align: center;
+                text-transform: uppercase;
+                width: 45%;
+                span {
+                    font-weight: bold;
+                }
+            }
+            p {
+                font: {
+                    size: torem(20);
+                }
+            }
+            .btn_simulado {
+                width: 100%;
+                height: torem(60);
+                a {
+                    color: transparent;
+                    display: block;
+                    font-family: sans-serif;
+                    font-size: torem(18);
+                    position: relative;
+                    text-decoration: none;
+                    width: 100%;
+                    height: 100%;
+                    &::after {
+                        background: {
+                            image: url('../images/asset_3.svg');
+                            size: 100%;
+                            repeat: no-repeat;
+                            position: center 20px;
+                        }
+                        content: '';
+                        display: block;
+                        visibility: visible;
+                        position: absolute;
+                        right: torem(5);
+                        top: 0;
+                        height: 100%;
+                        width: torem(10);
+                    }
+                }
+                @media (min-width: torem(769)) {
+                    a {
+                        border: torem(1) solid colors(app, text);
+                        border-radius: torem(400);
+                        color: colors(app, text);
+                        padding: torem(5) torem(20);
+                        width: 50%;
+                        height: torem(30);
+                        margin: 0 auto;
+                        margin-left: torem(140);
+                        margin-top: torem(16);
+                        text-align: center;
+                        text-transform: capitalize;
+                        &::after {
+                            display: none;
+                            visibility: hidden;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,156 @@
+@import
+    'partials/functions',
+    'partials/reset',
+    'partials/grid';
+
+* {
+    box-sizing: border-box;
+    &::after,
+    &::before {
+        clear: both;
+        display: none;
+        visibility: hidden;
+    }
+}
+
+.container-fluid {
+    padding: 0;
+    max-width: torem(1600);
+}
+.row {
+    padding: .5rem;
+}
+
+.back_page {
+    position: relative;
+    a {
+        color: darken(colors(app, dark), 100);
+        display: block;
+        font: {
+            family: sans-serif;
+            size: torem(18);
+        }
+        text-decoration: none;
+
+        padding: {
+            left: torem(50);
+            top: torem(7);
+        }
+        width: 30%;
+        height: torem(30);
+        &::before {
+            background: {
+                image: url('../images/asset_4.svg');
+                size: 50%;
+                repeat: no-repeat;
+                position: center;
+            }
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: torem(45);
+            height: torem(30);
+            visibility: visible;
+        }
+    }
+}
+
+.header {
+    margin: {
+        top: torem(20);
+    }
+    padding-bottom: torem(50);
+    text-align: center;
+    h2,
+    h3 {
+        display: block;
+        font-family: sans-serif;
+        width: 100%;
+    }
+    h2 {
+        font-size: torem(30);
+        margin-bottom: torem(5);
+        @media (min-width: torem(769)) {
+            font-size: torem(70);
+            margin-bottom: torem(10);
+        }
+    }
+    h3 {
+        @media (min-width: torem(769)) {
+            font-size: torem(35);
+        }
+    }
+}
+
+.content {
+    background: colors(app, text);
+    color: colors(app, base);
+    height: 76.2vh;
+    padding: {
+        top: torem(16);
+        right: torem(32);
+        bottom: torem(50);
+        left: torem(32);
+    }
+    @media (min-width: torem(769)) {
+        padding: 0;
+    }
+    .image {
+        display: none;
+        visibility: hidden;
+        img {
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+        @media (min-width: torem(769)) {
+            display: block;
+            visibility: visible;
+        }
+    }
+    .main {
+        @media (min-width: torem(769)) {
+            padding: torem(30) torem(50);
+        }
+        h1,
+        p {
+            font-family: sans-serif;
+            &:nth-child(3) {
+                display: none;
+                visibility: hidden;
+                @media (min-width: torem(769)) {
+                    display: block;
+                    visibility: visible;
+                }
+            }
+        }
+        h1 {
+            text-transform: uppercase;
+            font-size: torem(32);
+            margin-bottom: torem(40);
+        }
+        p {
+            font-size: torem(18);
+            margin-bottom: torem(50);
+        }
+        .subscribe {
+            width: 100%;
+            margin-top: torem(130);
+            @media (min-width: torem(769)) {
+                width: 50%;
+                margin-left: 25%;
+            }
+            .btn {
+                background: lighten(colors(app, text), 5);
+                border: none;
+                color: colors(app, base);
+                font-family: sans-serif;
+                font-size: torem(22);
+                height: torem(50);
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<svg width="8" height="15" viewBox="0 0 8 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>asset 3</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-12999 3754)">
+<g id="asset 3">
+<use xlink:href="#path0_stroke" transform="translate(12999.5 -3753)" fill="#565454"/>
+</g>
+</g>
+<defs>
+<path id="path0_stroke" d="M 6.5 7L 6.85355 7.35355L 7.18095 7.02615L 6.87963 6.6746L 6.5 7ZM 0.120372 0.325396L 6.12037 7.3254L 6.87963 6.6746L 0.879628 -0.325396L 0.120372 0.325396ZM 6.14645 6.64645L -0.353553 13.1464L 0.353553 13.8536L 6.85355 7.35355L 6.14645 6.64645Z"/>
+</defs>
+</svg>

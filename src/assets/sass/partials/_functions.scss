@@ -1,0 +1,16 @@
+@function colors($color, $type:base) {
+    $colors: (
+        app: (
+            base: #ffffff,
+            text: #007ec1,
+            dark: #333,
+            title: #632582
+        )
+    );
+    $returnColor: map-get($colors, $color);
+    @return map-get($returnColor, $type);
+}
+
+@function torem($pixel) {
+    @return ($pixel / 16) + rem;
+}
