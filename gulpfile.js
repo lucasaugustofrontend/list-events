@@ -6,7 +6,7 @@ const sourcemaps = require('gulp-sourcemaps')
 gulp.task('default', ['server', 'watch'])
 
 gulp.task('copy', () => {
-  gulp.src(['src/*.html', 'src/assets/css/**/*', 'src/assets/images/**/*'])
+  gulp.src(['src/*.html', 'src/assets/css/**', 'src/assets/images/**'])
     .pipe(gulp.dest('docs'))
 })
 
